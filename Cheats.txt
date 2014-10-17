@@ -1,0 +1,7 @@
+
+Name        |  Description
+
+wpcclass    	|  Creación de clases para el core de widget pc & wordpress
+gs		|  Creación de getters y setters funciones publicas para una clase cualquiera.
+ocphp		|  Abre y cierra php ejemplo <?php ?>
+cophp		|  cierra y abre php ejemplo ?> <?php

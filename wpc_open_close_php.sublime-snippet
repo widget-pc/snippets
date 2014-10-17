@@ -1,0 +1,24 @@
+<!--
+php-getset
+
+-->
+<snippet>
+<content><![CDATA[
+<?php
+
+?>
+]]></content>
+<!-- Optional: Tab trigger to activate the snippet -->
+<tabTrigger>ocphp</tabTrigger>
+<!-- Optional: Scope the tab trigger will be active in -->
+<scope>
+	text.plain,
+	source.php,
+	text.html,
+	text.html(.basic),
+	source.css,
+	source.js
+</scope>
+<!-- Optional: Description to show in the menu -->
+<description>Create open and close php</description>
+</snippet>
