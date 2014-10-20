@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+/*
+ * ${1:description}
+ * Author: ${2:author_name} <${3:email}@widget-pc.com> (Widget PC)
+ * Create date: ${4:day}/${5:mounth}/${6:year}
+ * Last Update: $4/$5/$6
+ * v-${7:vertion}
+ */
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>credits</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>
