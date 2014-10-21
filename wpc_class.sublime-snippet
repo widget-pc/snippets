@@ -17,42 +17,40 @@ methods for you.
 <snippet>
 <content><![CDATA[
 
-/**
- *  Class Wpc${1:[class_name]}
- *	Description: ${2:[class_description]}
- *  Author: ${3:[class_author]}
- *  Version: ${4:[class_version]}
- *  Last_Update: ${5:[class_last_update]}
+/*
+ * ${1:description}
+ * Author: ${2:author_name} <${3:email}@widget-pc.com> (Widget PC)
+ * Create date: ${4:day}/${5:mounth}/${6:year}
+ * Last Update: $4/$5/$6
+ * v-${7:vertion}
  */
+class ${8:name}{
+	
+	${9:/*
+	 * ${10:description}
+	 * @var ${11:type}
+	 */
+	private \$_${12:name};}
+	
+	${13:/*
+	 * ${14:description}
+	 * @var ${15:type}
+	 */
+	private \$${16:name};}
 
-class Wpc${1:[class_name]}{
+	${17:/*
+	 * ${18:description}
+	 * @var ${19:type}
+	 */
+	private \$${20:name};}
 	
 
-	/**
-	 * ${7:[var_description]}
-	 * @var ${8:[type]}
+	/*
+	 * ${21:description}
 	 */
-	private \$_${6:[variable_name]};
-
-	/**
-	 * ${10:[var_description]}
-	 * @var ${11:[type]}
-	 */
-	protected \$${9:[variable_name]};
-
-	/**
-	 * ${13:[var_description]}
-	 * @var ${14:[type]}
-	 */
-	public  \$${12:[variable_name]};
-
-	function __construct() {
-		//Class Constructor
+	function __construct(){
 
    	}
-
-
-
 }
 
 
@@ -62,5 +60,5 @@ class Wpc${1:[class_name]}{
 <!-- Optional: Scope the tab trigger will be active in -->
 <scope>source.php</scope>
 <!-- Optional: Description to show in the menu -->
-<description>snippet WpcClass for widget core libraries</description>
+<description>Snippet WpcClass for widget core libraries</description>
 </snippet>
