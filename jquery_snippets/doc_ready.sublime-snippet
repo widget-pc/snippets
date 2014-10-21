@@ -1,0 +1,14 @@
+<snippet>
+<content><![CDATA[
+<script>
+jQuery(document).ready(function() {
+${1://put all your jQuery goodness in here.}
+});
+</script>
+]]></content>
+<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+<tabTrigger>jqready</tabTrigger>
+<!-- Optional: Set a scope to limit where the snippet will trigger -->
+<!-- Optional: Description to show in the menu -->
+<description>jQuery Document Ready</description>
+</snippet>
