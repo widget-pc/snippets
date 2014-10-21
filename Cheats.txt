@@ -1,7 +1,17 @@
 
-Name        |  Description
+Name        	|  Description
 
 wpcclass    	|  Creación de clases para el core de widget pc & wordpress
 gs		|  Creación de getters y setters funciones publicas para una clase cualquiera.
 ocphp		|  Abre y cierra php ejemplo <?php ?>
 cophp		|  cierra y abre php ejemplo ?> <?php
+
+	jquery
+
+docready	| Abre y cierra jquery para wordpress sin <script>
+jqready		| Abre y cierra jquery para wordpress con <script>
+
+
+	Comments	
+
+superc		| comentario grande 
