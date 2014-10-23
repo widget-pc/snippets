@@ -1,0 +1,17 @@
+<snippet>
+<content><![CDATA[
+
+/*
+ * ${1:description}
+ * @var ${2:type}
+ */
+${3:scope} \$${4:var name};
+
+]]></content>
+<!-- Optional: Tab trigger to activate the snippet -->
+<tabTrigger>phpvar</tabTrigger>
+<!-- Optional: Scope the tab trigger will be active in -->
+<scope>source.php</scope>
+<!-- Optional: Description to show in the menu -->
+<description>Snippet to create php var inside class</description>
+</snippet>
