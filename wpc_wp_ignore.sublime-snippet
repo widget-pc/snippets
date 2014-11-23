@@ -1,0 +1,35 @@
+<snippet>
+	<content><![CDATA[
+gulp/bower_components
+gulp/node_modules
+gulp/.sass-cache
+wp-admin
+wp-includes
+*.htaccess
+error_log
+index.php
+licencia.txt
+license.txt
+readme.html
+sftp-config.json
+wp-activate.php
+wp-blog-header.php
+wp-comments-post.php
+wp-config-sample.php
+wp-cron.php
+wp-links-opml.php
+wp-load.php
+wp-login.php
+wp-mail.php
+wp-settings.php
+wp-signup.php
+wp-trackback.php
+xmlrpc.php
+*.sublime-project
+*.sublime-workspace
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>wpignore</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>
