@@ -1,8 +1,8 @@
 <snippet>
 	<content><![CDATA[
-/*
+/**
  * ${1:description}
- ${2:* @var ${3:type} ${4:name} ${5:desc}} 
+ ${2:* @param ${3:type} ${4:name} ${5:desc}} 
  *
  ${6:* @return ${7:void} ${8:desc}} 
  */
