@@ -17,7 +17,7 @@ methods for you.
 <snippet>
 <content><![CDATA[
 
-/*
+/**
  * ${1:description}
  * Author: ${2:author_name} <${3:email}@widget-pc.com> (Widget PC)
  * Create date: ${4:day}/${5:mounth}/${6:year}
@@ -26,26 +26,26 @@ methods for you.
  */
 class ${8:name}{
 	
-	${9:/*
+	${9:/**
 	 * ${10:description}
 	 * @var ${11:type}
 	 */
 	private \$_${12:name};}
 	
-	${13:/*
+	${13:/**
 	 * ${14:description}
 	 * @var ${15:type}
 	 */
 	private \$${16:name};}
 
-	${17:/*
+	${17:/**
 	 * ${18:description}
 	 * @var ${19:type}
 	 */
 	private \$${20:name};}
 	
 
-	/*
+	/**
 	 * ${21:description}
 	 */
 	function __construct(){

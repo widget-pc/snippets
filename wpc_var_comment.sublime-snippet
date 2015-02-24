@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[
-/*
+/**
  * ${1:description}
  * @var ${2:type}
  */

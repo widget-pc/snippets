@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[
-/*
+/**
  * ${1:description}
  * Author: ${2:author_name} <${3:email}@widget-pc.com> (Widget PC)
  * Create date: ${4:day}/${5:mounth}/${6:year}
