@@ -1,9 +1,16 @@
 <snippet>
 	<content><![CDATA[
-//use Rules\$2RulesValidation;
-//use Services\$2Service;
+
+//use Rules\\${2:Resource}RulesValidation;
+use Services\\${2:Resource}Service;
 
 class ${1:Name}Controller extends ExtendedController {
+
+	/**
+	 * @var Validation rules
+	 */
+	protected $Rules;
+	
 
     /*
      * Constructor
@@ -11,42 +18,45 @@ class ${1:Name}Controller extends ExtendedController {
      */
 	public function __construct(Model \$model){
 
-		\$this->Service = new ModelService();
         \$this->Model = \$model;
-        
+		\$this->Service = new ${2:Resource}Service();
+        /*\$this->Rules = new ${2:Resource}RulesValidation(); */
+
         parent::__construct(array( 'before_filter' => array('dummy', 'data_lenght'), 'after_filter' => array('status_response')) );
 	}
 
+
 	/**
 	 * Display a listing of the resource.
-	 * GET/${1/^(\w)|(?:_(\w))/(?1\l$1:)(?2 \l$2:)/g}
+	 * GET /${1/^(\w)|(?:_(\w))/(?1\l$1:)(?2 \l$2:)/g}
 	 *
 	 * @return Response
 	 */
 	public function index(){
 		\$data = \$this->Service->getIndex(\$this->Model);
 		return \$this->StatusResponse->setStatusMessage(\$data['message'])
-									->response( \$data['isSuccess'], array('text-transform: lowercase;$1' => \$data['response']->getItems(), 'pagination' => $2::getPagination(\$data['response']))); 
+									->response( \$data['isSuccess'], array('${1/^(\w)|(?:_(\w))/(?1\l$1:)(?2 \l$2:)/g}' => \$data['response']->getItems(), 'pagination' => $2::getPagination(\$data['response']))); 
 	}
 
 
 	/**
 	 * Store a newly created resource in storage.
-	 * POST /text-transform: lowercase;$1
+	 * POST /${1/^(\w)|(?:_(\w))/(?1\l$1:)(?2 \l$2:)/g}
 	 *
 	 * @return Response
 	 */
 	public function store(){
 		\$input  = Input::all();
-		\$data = \$this->Service->store(\$input, \$this->Model, null);
+		\$data = \$this->Service->store(\$input, \$this->Model/*, $this->Rules */);
 
 		return \$this->StatusResponse->setStatusMessage(\$data['message'])
 									->response(\$data['isSuccess'], array('id' => \$data['response'])); 
 	}
 
+
 	/**
 	 * Display the specified resource.
-	 * GET /text-transform: lowercase;$1/{id}
+	 * GET /${1/^(\w)|(?:_(\w))/(?1\l$1:)(?2 \l$2:)/g}/{id}
 	 *
 	 * @param  int  \$id
 	 * @return Response
@@ -55,29 +65,31 @@ class ${1:Name}Controller extends ExtendedController {
 		\$data = \$this->Service->getShow(\$this->Model, \$id);
 
 		return \$this->StatusResponse->setStatusMessage(\$data['message'])
-									->response(\$data['isSuccess'], array('model' => \$data['response'])); 
+									->response(\$data['isSuccess'], array('${2/^(\w)|(?:_(\w))/(?1\l$1:)(?2 \l$2:)/g}' => \$data['response'])); 
 	}
+
 
 	/**
 	 * Update the specified resource in storage.
-	 * PUT /text-transform: lowercase;$1/{id}
+	 * PUT /${1/^(\w)|(?:_(\w))/(?1\l$1:)(?2 \l$2:)/g}/{id}
 	 *
 	 * @param  int  \$id
 	 * @return Response
 	 */
 	public function update(\$id){
 		\$input = Input::all();
-        \$data = \$this->Service->update(\$id, \$this->Model, \$input, null);
+        \$data = \$this->Service->update(\$id, \$this->Model, \$input/*, $this->Rules */);
 
         return \$this->StatusResponse->setStatusMessage(\$data['message'])
         							->response(\$data['isSuccess'], array('id' => \$data['response']));
 	}
 
+
 	/**
 	 * Remove the specified resource from storage.
-	 * DELETE /text-transform: lowercase;$1/{id}
+	 * DELETE /${1/^(\w)|(?:_(\w))/(?1\l$1:)(?2 \l$2:)/g}/{id}
 	 *
-	 * @param  int  \$id
+	 * @param  int $id
 	 * @return Response
 	 */
 	public function destroy(\$id){
@@ -86,12 +98,18 @@ class ${1:Name}Controller extends ExtendedController {
 		return \$this->StatusResponse->setStatusMessage(\$data['message'])
 									->response(\$data['isSuccess'], \$data['response']);
 	}
-
 }
+
+${3:
+/**
+ * Dont forget create:
+ * --> {Resource\}RulesValidation file 
+ * --> {Resource\}Service file 
+ */}
 
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>extendedController</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
-	<scope>source.php</scope>
+	<!-- <scope>source.php</scope> -->
 </snippet>
