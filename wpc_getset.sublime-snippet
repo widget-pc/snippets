@@ -24,6 +24,7 @@ methods for you.
 public function get${1/(.*)/\u$1/:[ Prop name ]}() {
 	return \$this->${1:[ Prop name ]};
 }
+
 /**
 * ${5:[Description]}
 *
