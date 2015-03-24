@@ -9,14 +9,14 @@ class ${1:Name}Controller extends ExtendedController {
 	/**
 	 * @var Validation rules
 	 */
-	protected $Rules;
+	protected \$Rules;
 	
 
     /*
      * Constructor
      * @param  Model/${2:Model} object
      */
-	public function __construct(Model \$model){
+	public function __construct(${2:Model} \$model){
 
         \$this->Model = \$model;
 		\$this->Service = new ${2:Resource}Service();

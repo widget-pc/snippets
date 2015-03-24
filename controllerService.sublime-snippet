@@ -1,0 +1,54 @@
+<snippet>
+	<content><![CDATA[
+<?php
+
+namespace Services;
+
+use Widgetpc\Chameleon\ResourcesService;
+use Widgetpc\Chameleon\Validations\ValidationException;
+
+use Illuminate\Support\Facades\Hash;
+use Exception;
+
+class ${1:Name}Service extends ResourcesService{
+
+	public function __construct(){
+
+	}
+
+	public function store(\$inputs, \$model, \$validation = null){
+		try{
+
+			if(\$validation != null)
+	    		\$validation->validate(\$inputs);
+						
+			return \$this->postStore(\$inputs, \$model); 	
+			
+        }catch (ValidationException \$exception){
+            return \$this->prepare_response(0, null, \$exception->get_errors(), '');
+        }
+	}
+
+	public function update(\$id, \$model, \$inputs, \$validation  = null){
+		try{
+			
+			if(\$validation != null)
+				\$validation->validate(\$inputs);
+			
+			return \$this->putUpdate(\$id, \$model, \$inputs);	
+
+		}catch(ValidationException \$exception){
+			return \$this->prepare_response(0, null, \$exception->get_errors(), '');
+		}
+	}
+}
+
+?>
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>service</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+</snippet>
